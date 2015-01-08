@@ -12,7 +12,7 @@
 		<gender>female</gender>
 		<index_updated_at>1418323947</index_updated_at>
 		<index_history>
-		<last_value_date>2015-01-08</last_value_date>
+			<last_value_date>2015-01-08</last_value_date>
 			<values>
 				<value>100</value>
 				<value>200</value>
@@ -23,6 +23,23 @@
 				<value>350</value>
 			</values>
 		</index_history>
+		<week_numbers>
+			<week_number>
+				<label>Steps</label>
+				<value>1000</value>
+				<color>green</color>
+			</week_number>
+			<week_number>
+				<label>Runs</label>
+				<value>2</value>
+				<color>green</color>
+			</week_number>
+			<week_number>
+				<label>Gym</label>
+				<value>1</value>
+				<color>red</color>
+			</week_number>
+		</week_numbers>
 	</user>
 	<user>
 		<id>P5zCrwdJ3giubpwVX2qTrh</id>
@@ -36,15 +53,33 @@
 		<gender>male</gender>
 		<index_updated_at>1418323947</index_updated_at>
 		<index_history>
-		<last_value_date>2015-01-08</last_value_date>
+		<last_value_date>2015-01-01</last_value_date>
 			<values>
+				<value>200</value>
+				<value>300</value>
+				<value>350</value>
 				<value>100</value>
 				<value>200</value>
 				<value>50</value>
 				<value>70</value>
-				<value>200</value>
-				<value>300</value>
-				<value>350</value>
 			</values>
 		</index_history>
-	</user></users>
+		<week_numbers>
+			<week_number>
+				<label>Steps</label>
+				<value>1000</value>
+				<color>green</color>
+			</week_number>
+			<week_number>
+				<label>Runs</label>
+				<value>2</value>
+				<color>green</color>
+			</week_number>
+			<week_number>
+				<label>Gym</label>
+				<value>3</value>
+				<color>green</color>
+			</week_number>
+		</week_numbers>
+	</user>
+</users>
