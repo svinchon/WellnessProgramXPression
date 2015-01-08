@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="users">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="user"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="user">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="external_id"/>
+        <xs:element ref="index"/>
+        <xs:element ref="username"/>
+        <xs:element ref="weight"/>
+        <xs:element ref="sports_activity"/>
+        <xs:element ref="birth_date"/>
+        <xs:element ref="email"/>
+        <xs:element ref="gender"/>
+        <xs:element ref="index_updated_at"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="id" type="xs:NCName"/>
+  <xs:element name="external_id" type="xs:NMTOKEN"/>
+  <xs:element name="index" type="xs:NCName"/>
+  <xs:element name="username" type="xs:NCName"/>
+  <xs:element name="weight" type="xs:decimal"/>
+  <xs:element name="sports_activity" type="xs:integer"/>
+  <xs:element name="birth_date" type="xs:date"/>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="gender" type="xs:NCName"/>
+  <xs:element name="index_updated_at" type="xs:NMTOKEN"/>
+</xs:schema>
