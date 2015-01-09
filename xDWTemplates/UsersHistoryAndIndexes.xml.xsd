@@ -69,5 +69,5 @@
   </xs:element>
   <xs:element name="label" type="xs:NCName"/>
   <xs:element name="color" type="xs:NCName"/>
-  <xs:element name="value" type="xs:integer"/>
+  <xs:element name="value" type="xs:decimal"/>
 </xs:schema>
