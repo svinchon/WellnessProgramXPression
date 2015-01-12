@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MigrationSpec>
+  <PdpFile name="C:\GIT\WellnessProgramXPression\xDWTemplates\DocMigrationPDP.pdpx" />
+  <xPressoPackage name="MonthlyReport.xdrwv" whichObj="all" version="1.0" toCat="xPresso" incfont="no" />
+</MigrationSpec>
+
