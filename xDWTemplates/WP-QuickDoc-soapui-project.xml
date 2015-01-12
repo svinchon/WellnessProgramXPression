@@ -833,7 +833,7 @@
          <web:outputProfileName>?</web:outputProfileName>
       </web:publishDocument>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/></con:call><con:call name="WP_DW_WeeklyReport_01"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/></con:call><con:call name="WP_DW_WeeklyReport_01"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
    <soapenv:Header/>
    <soapenv:Body>
       <web:publishDocument>
