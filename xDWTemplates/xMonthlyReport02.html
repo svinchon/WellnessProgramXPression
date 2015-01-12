@@ -58,10 +58,7 @@ p {
                 <p> Hi <xPresso type="text" id="19103029320" name="username" variable="user:username" disFormat="null" hideFlag="false" searchFlag="true">{username}</xPresso> Milda, </p>
                 <p> Congratulations! </p>
                 <p> You did great this month.</p>
-<xPresso type="text" id="19154146427" name="createLineChartValuesAndGetName" variable="createLineChartValuesAndGetName" hideFlag="false" searchFlag="true"><img src="{createLineChartValuesAndGetName}"></xPresso>
-
-<img src="file:///C:/GIT/WellnessProgramXPression/xDWTemplates/Graphics/BarGraphic1.png" />
-            </div>
+<xPresso type="text" id="19154146427" name="createLineChartValuesAndGetName" variable="createLineChartValuesAndGetName" hideFlag="false" searchFlag="true"><img src="{createLineChartValuesAndGetName}"></xPresso> <xPresso type="text" id="19165912015" name="createBarChartValuesAndGetName" variable="createBarChartValuesAndGetName" hideFlag="false" searchFlag="true"><img src="{createBarChartValuesAndGetName}"></xPresso></div>
         </div>
         <div class="footer">
             Copyrights VITEX&reg;
@@ -196,10 +193,6 @@ p {
   </TableDef>
 </TableDefs>
 <VarDefs>
-  <VarDef name="initLineChartValues" id="16" type="string" expType="JavaScript" expression="initLineChartValues();" disFormat="null" position="16" selfAdaptive="false" searchFlag="false"></VarDef>
-  <VarDef name="addValueToLineChartValues" id="17" type="string" expType="JavaScript" expression="addValueToLineChartValues(values.value)" disFormat="null" position="17" selfAdaptive="false" searchFlag="false"></VarDef>
-  <VarDef name="displayLineChartValues" id="18" type="string" expType="JavaScript" expression="displayLineChartValues()" disFormat="null" position="18" selfAdaptive="false" searchFlag="false"></VarDef>
-  <VarDef name="getLineChartFileName" id="19" type="string" expType="JavaScript" expression="getLineChartFileName()" disFormat="null" position="19" selfAdaptive="false" searchFlag="false"></VarDef>
   <VarDef name="IndexVal1" id="20" type="string" expType="XPath" expression="/user/index_history/values/value[1]" disFormat="null" position="20" selfAdaptive="false" searchFlag="false"></VarDef>
   <VarDef name="IndexVal2" id="21" type="string" expType="XPath" expression="/user/index_history/values/value[2]" disFormat="null" position="21" selfAdaptive="false" searchFlag="false"></VarDef>
   <VarDef name="IndexVal3" id="22" type="string" expType="XPath" expression="/user/index_history/values/value[3]" disFormat="null" position="22" selfAdaptive="false" searchFlag="false"></VarDef>
@@ -208,9 +201,16 @@ p {
   <VarDef name="IndexVal6" id="26" type="string" expType="XPath" expression="/user/index_history/values/value[6]" disFormat="null" position="26" selfAdaptive="false" searchFlag="false"></VarDef>
   <VarDef name="IndexVal7" id="27" type="string" expType="XPath" expression="/user/index_history/values/value[7]" disFormat="null" position="27" selfAdaptive="false" searchFlag="false"></VarDef>
   <VarDef name="createLineChartValuesAndGetName" id="28" type="string" expType="JavaScript" expression="createLineChartValuesAndGetName(IndexVal1, IndexVal2, IndexVal3, IndexVal4, IndexVal5, IndexVal6, IndexVal7)" disFormat="null" position="28" selfAdaptive="false" searchFlag="false"></VarDef>
+  <VarDef name="Bar1Val1" id="30" type="string" expType="JavaScript" expression="'30'" disFormat="null" position="30" selfAdaptive="false" searchFlag="false"></VarDef>
+  <VarDef name="Bar1Val2" id="31" type="string" expType="JavaScript" expression="'70'" disFormat="null" position="31" selfAdaptive="false" searchFlag="false"></VarDef>
+  <VarDef name="Bar2Val1" id="32" type="string" expType="JavaScript" expression="'70'" disFormat="null" position="32" selfAdaptive="false" searchFlag="false"></VarDef>
+  <VarDef name="Bar2Val2" id="33" type="string" expType="JavaScript" expression="'30'" disFormat="null" position="33" selfAdaptive="false" searchFlag="false"></VarDef>
+  <VarDef name="createBarChartValuesAndGetName" id="34" type="string" expType="JavaScript" expression="createBarChartValuesAndGetName(Bar1Val1, Bar1Val2, Bar2Val1, Bar2Val2)" disFormat="null" position="34" selfAdaptive="false" searchFlag="false"></VarDef>
 </VarDefs>
 <GlobalJSSetting>
   <GlobalJS id="1" name="WPJSL1" type="external" reference="C:\GIT\WellnessProgramXPression\xDWTemplates\JS\WellnessProgramJSLibrary1.js"></GlobalJS>
 </GlobalJSSetting>
 <LastXML path="file:///C|/GIT/WellnessProgramXPression/xDWTemplates/UsersHistoryAndIndexes.xml"></LastXML>
 <FolderDefs></FolderDefs>
+
+<publishReady status="true"></publishReady>

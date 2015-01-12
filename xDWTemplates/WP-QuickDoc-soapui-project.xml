@@ -1,0 +1,933 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="WP_QuickDoc" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="QuickDocSoap11Binding" type="wsdl" bindingName="{http://webservice.framework.xprs.dsc.com}QuickDocSoap11Binding" soapVersion="1_1" anonymous="optional" definition="http://localhost:8080/xFramework/services/QuickDoc?wsdl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:8080/xFramework/services/QuickDoc?wsdl"><con:part><con:url>http://localhost:8080/xFramework/services/QuickDoc?wsdl</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://webservice.framework.xprs.dsc.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:ns1="http://org.apache.axis2/xsd" xmlns:ns="http://webservice.framework.xprs.dsc.com" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:ax25="http://outputprofile.xpression.docscience.com/xsd" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/">
+  <wsdl:documentation>QuickDoc</wsdl:documentation>
+  <wsdl:types>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://webservice.framework.xprs.dsc.com" xmlns:ax26="http://outputprofile.xpression.docscience.com/xsd">
+      <xs:import namespace="http://outputprofile.xpression.docscience.com/xsd"/>
+      <xs:complexType name="Exception">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="Exception" nillable="true" type="xs:anyType"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:element name="SOAPFaultException">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="SOAPFaultException" nillable="true" type="xs:anyType"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="publishAndReturnDocument">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="customerData" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="outputProfileName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="publishAndReturnDocumentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="thumbnailForDocument">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="thumbnailForDocumentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:base64Binary"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="publishAndReturnDocumentMultipleStream">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="customerData" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="outputProfileName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="includeMetaData" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="publishAndReturnDocumentMultipleStreamResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="ax26:MultiStream"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="descriptionForDocument">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="descriptionForDocumentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="designToolForDocument">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="designToolForDocumentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getDataCollectionTemplate">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="customerData" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getDataCollectionTemplateResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTemplateFields">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="customerData" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getTemplateFieldsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="publishDocument">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="customerData" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="outputProfileName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="publishDocumentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="publishDocuments">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="documentPackageNames" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="outputProfileName" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="customerData" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="publishDocumentsResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="categoriesForUser">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="categoriesForUserResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="documentsForCategory">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="categoryName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="documentsForCategoryResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="outputProfilesForDocument">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="outputProfilesForDocumentResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="versionsForDocumentWithWorkflowStatus">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element minOccurs="0" name="requestContext" nillable="true" type="xs:string"/>
+            <xs:element minOccurs="0" name="documentName" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="versionsForDocumentWithWorkflowStatusResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element maxOccurs="unbounded" minOccurs="0" name="return" nillable="true" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+    <xs:schema attributeFormDefault="qualified" elementFormDefault="qualified" targetNamespace="http://outputprofile.xpression.docscience.com/xsd">
+      <xs:complexType name="MultiStream">
+        <xs:sequence>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="stream" nillable="true" type="ax25:Stream"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Stream">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="metaData" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="outputProfileCombination" nillable="true" type="ax25:OutputProfileCombination"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="partitions" nillable="true" type="ax25:Partition"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OutputProfileCombination">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="distributionDefinition" nillable="true" type="ax25:DistributionDefinition"/>
+          <xs:element minOccurs="0" name="outputDefinition" nillable="true" type="ax25:OutputDefinition"/>
+          <xs:element minOccurs="0" name="streamDefinition" nillable="true" type="ax25:StreamDefinition"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="DistributionDefinition">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="detailDefinition" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:long"/>
+          <xs:element minOccurs="0" name="mode" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="OutputDefinition">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="detailDefinition" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="fillablePDFOutput" type="xs:boolean"/>
+          <xs:element minOccurs="0" name="format" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:long"/>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="StreamDefinition">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="detailDefinition" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="0" name="id" type="xs:long"/>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="Partition">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+          <xs:element maxOccurs="unbounded" minOccurs="0" name="partitionData" nillable="true" type="ax25:PartitionData"/>
+          <xs:element minOccurs="0" name="partitionMetaData" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="PartitionData">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="data" nillable="true" type="xs:base64Binary"/>
+          <xs:element minOccurs="0" name="index" type="xs:int"/>
+          <xs:element minOccurs="0" name="name" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="versionsForDocumentWithWorkflowStatusRequest">
+    <wsdl:part name="parameters" element="ns:versionsForDocumentWithWorkflowStatus"/>
+  </wsdl:message>
+  <wsdl:message name="versionsForDocumentWithWorkflowStatusResponse">
+    <wsdl:part name="parameters" element="ns:versionsForDocumentWithWorkflowStatusResponse"/>
+  </wsdl:message>
+  <wsdl:message name="SOAPFaultException">
+    <wsdl:part name="parameters" element="ns:SOAPFaultException"/>
+  </wsdl:message>
+  <wsdl:message name="publishAndReturnDocumentRequest">
+    <wsdl:part name="parameters" element="ns:publishAndReturnDocument"/>
+  </wsdl:message>
+  <wsdl:message name="publishAndReturnDocumentResponse">
+    <wsdl:part name="parameters" element="ns:publishAndReturnDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getDataCollectionTemplateRequest">
+    <wsdl:part name="parameters" element="ns:getDataCollectionTemplate"/>
+  </wsdl:message>
+  <wsdl:message name="getDataCollectionTemplateResponse">
+    <wsdl:part name="parameters" element="ns:getDataCollectionTemplateResponse"/>
+  </wsdl:message>
+  <wsdl:message name="outputProfilesForDocumentRequest">
+    <wsdl:part name="parameters" element="ns:outputProfilesForDocument"/>
+  </wsdl:message>
+  <wsdl:message name="outputProfilesForDocumentResponse">
+    <wsdl:part name="parameters" element="ns:outputProfilesForDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="publishAndReturnDocumentMultipleStreamRequest">
+    <wsdl:part name="parameters" element="ns:publishAndReturnDocumentMultipleStream"/>
+  </wsdl:message>
+  <wsdl:message name="publishAndReturnDocumentMultipleStreamResponse">
+    <wsdl:part name="parameters" element="ns:publishAndReturnDocumentMultipleStreamResponse"/>
+  </wsdl:message>
+  <wsdl:message name="descriptionForDocumentRequest">
+    <wsdl:part name="parameters" element="ns:descriptionForDocument"/>
+  </wsdl:message>
+  <wsdl:message name="descriptionForDocumentResponse">
+    <wsdl:part name="parameters" element="ns:descriptionForDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="categoriesForUserRequest">
+    <wsdl:part name="parameters" element="ns:categoriesForUser"/>
+  </wsdl:message>
+  <wsdl:message name="categoriesForUserResponse">
+    <wsdl:part name="parameters" element="ns:categoriesForUserResponse"/>
+  </wsdl:message>
+  <wsdl:message name="publishDocumentRequest">
+    <wsdl:part name="parameters" element="ns:publishDocument"/>
+  </wsdl:message>
+  <wsdl:message name="publishDocumentResponse">
+    <wsdl:part name="parameters" element="ns:publishDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="getTemplateFieldsRequest">
+    <wsdl:part name="parameters" element="ns:getTemplateFields"/>
+  </wsdl:message>
+  <wsdl:message name="getTemplateFieldsResponse">
+    <wsdl:part name="parameters" element="ns:getTemplateFieldsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="thumbnailForDocumentRequest">
+    <wsdl:part name="parameters" element="ns:thumbnailForDocument"/>
+  </wsdl:message>
+  <wsdl:message name="thumbnailForDocumentResponse">
+    <wsdl:part name="parameters" element="ns:thumbnailForDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:message name="documentsForCategoryRequest">
+    <wsdl:part name="parameters" element="ns:documentsForCategory"/>
+  </wsdl:message>
+  <wsdl:message name="documentsForCategoryResponse">
+    <wsdl:part name="parameters" element="ns:documentsForCategoryResponse"/>
+  </wsdl:message>
+  <wsdl:message name="publishDocumentsRequest">
+    <wsdl:part name="parameters" element="ns:publishDocuments"/>
+  </wsdl:message>
+  <wsdl:message name="publishDocumentsResponse">
+    <wsdl:part name="parameters" element="ns:publishDocumentsResponse"/>
+  </wsdl:message>
+  <wsdl:message name="designToolForDocumentRequest">
+    <wsdl:part name="parameters" element="ns:designToolForDocument"/>
+  </wsdl:message>
+  <wsdl:message name="designToolForDocumentResponse">
+    <wsdl:part name="parameters" element="ns:designToolForDocumentResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="QuickDocPortType">
+    <wsdl:operation name="versionsForDocumentWithWorkflowStatus">
+      <wsdl:input message="ns:versionsForDocumentWithWorkflowStatusRequest" wsaw:Action="urn:versionsForDocumentWithWorkflowStatus"/>
+      <wsdl:output message="ns:versionsForDocumentWithWorkflowStatusResponse" wsaw:Action="urn:versionsForDocumentWithWorkflowStatusResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:versionsForDocumentWithWorkflowStatusSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="publishAndReturnDocument">
+      <wsdl:input message="ns:publishAndReturnDocumentRequest" wsaw:Action="urn:publishAndReturnDocument"/>
+      <wsdl:output message="ns:publishAndReturnDocumentResponse" wsaw:Action="urn:publishAndReturnDocumentResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:publishAndReturnDocumentSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getDataCollectionTemplate">
+      <wsdl:input message="ns:getDataCollectionTemplateRequest" wsaw:Action="urn:getDataCollectionTemplate"/>
+      <wsdl:output message="ns:getDataCollectionTemplateResponse" wsaw:Action="urn:getDataCollectionTemplateResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:getDataCollectionTemplateSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="outputProfilesForDocument">
+      <wsdl:input message="ns:outputProfilesForDocumentRequest" wsaw:Action="urn:outputProfilesForDocument"/>
+      <wsdl:output message="ns:outputProfilesForDocumentResponse" wsaw:Action="urn:outputProfilesForDocumentResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:outputProfilesForDocumentSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="publishAndReturnDocumentMultipleStream">
+      <wsdl:input message="ns:publishAndReturnDocumentMultipleStreamRequest" wsaw:Action="urn:publishAndReturnDocumentMultipleStream"/>
+      <wsdl:output message="ns:publishAndReturnDocumentMultipleStreamResponse" wsaw:Action="urn:publishAndReturnDocumentMultipleStreamResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:publishAndReturnDocumentMultipleStreamSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="descriptionForDocument">
+      <wsdl:input message="ns:descriptionForDocumentRequest" wsaw:Action="urn:descriptionForDocument"/>
+      <wsdl:output message="ns:descriptionForDocumentResponse" wsaw:Action="urn:descriptionForDocumentResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:descriptionForDocumentSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="categoriesForUser">
+      <wsdl:input message="ns:categoriesForUserRequest" wsaw:Action="urn:categoriesForUser"/>
+      <wsdl:output message="ns:categoriesForUserResponse" wsaw:Action="urn:categoriesForUserResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:categoriesForUserSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="publishDocument">
+      <wsdl:input message="ns:publishDocumentRequest" wsaw:Action="urn:publishDocument"/>
+      <wsdl:output message="ns:publishDocumentResponse" wsaw:Action="urn:publishDocumentResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:publishDocumentSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="getTemplateFields">
+      <wsdl:input message="ns:getTemplateFieldsRequest" wsaw:Action="urn:getTemplateFields"/>
+      <wsdl:output message="ns:getTemplateFieldsResponse" wsaw:Action="urn:getTemplateFieldsResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:getTemplateFieldsSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="thumbnailForDocument">
+      <wsdl:input message="ns:thumbnailForDocumentRequest" wsaw:Action="urn:thumbnailForDocument"/>
+      <wsdl:output message="ns:thumbnailForDocumentResponse" wsaw:Action="urn:thumbnailForDocumentResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:thumbnailForDocumentSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="documentsForCategory">
+      <wsdl:input message="ns:documentsForCategoryRequest" wsaw:Action="urn:documentsForCategory"/>
+      <wsdl:output message="ns:documentsForCategoryResponse" wsaw:Action="urn:documentsForCategoryResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:documentsForCategorySOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="publishDocuments">
+      <wsdl:input message="ns:publishDocumentsRequest" wsaw:Action="urn:publishDocuments"/>
+      <wsdl:output message="ns:publishDocumentsResponse" wsaw:Action="urn:publishDocumentsResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:publishDocumentsSOAPFaultException"/>
+    </wsdl:operation>
+    <wsdl:operation name="designToolForDocument">
+      <wsdl:input message="ns:designToolForDocumentRequest" wsaw:Action="urn:designToolForDocument"/>
+      <wsdl:output message="ns:designToolForDocumentResponse" wsaw:Action="urn:designToolForDocumentResponse"/>
+      <wsdl:fault message="ns:SOAPFaultException" name="SOAPFaultException" wsaw:Action="urn:designToolForDocumentSOAPFaultException"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="QuickDocSoap11Binding" type="ns:QuickDocPortType">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+    <wsdl:operation name="publishAndReturnDocument">
+      <soap:operation soapAction="urn:publishAndReturnDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="versionsForDocumentWithWorkflowStatus">
+      <soap:operation soapAction="urn:versionsForDocumentWithWorkflowStatus" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getDataCollectionTemplate">
+      <soap:operation soapAction="urn:getDataCollectionTemplate" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="outputProfilesForDocument">
+      <soap:operation soapAction="urn:outputProfilesForDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="publishAndReturnDocumentMultipleStream">
+      <soap:operation soapAction="urn:publishAndReturnDocumentMultipleStream" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="descriptionForDocument">
+      <soap:operation soapAction="urn:descriptionForDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="categoriesForUser">
+      <soap:operation soapAction="urn:categoriesForUser" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="getTemplateFields">
+      <soap:operation soapAction="urn:getTemplateFields" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="publishDocument">
+      <soap:operation soapAction="urn:publishDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="thumbnailForDocument">
+      <soap:operation soapAction="urn:thumbnailForDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="documentsForCategory">
+      <soap:operation soapAction="urn:documentsForCategory" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="designToolForDocument">
+      <soap:operation soapAction="urn:designToolForDocument" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="publishDocuments">
+      <soap:operation soapAction="urn:publishDocuments" style="document"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+      <wsdl:fault name="SOAPFaultException">
+        <soap:fault use="literal" name="SOAPFaultException"/>
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="QuickDocHttpBinding" type="ns:QuickDocPortType">
+    <http:binding verb="POST"/>
+    <wsdl:operation name="publishAndReturnDocument">
+      <http:operation location="QuickDoc/publishAndReturnDocument"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="publishAndReturnDocument"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="publishAndReturnDocument"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="versionsForDocumentWithWorkflowStatus">
+      <http:operation location="QuickDoc/versionsForDocumentWithWorkflowStatus"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="versionsForDocumentWithWorkflowStatus"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="versionsForDocumentWithWorkflowStatus"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getDataCollectionTemplate">
+      <http:operation location="QuickDoc/getDataCollectionTemplate"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="getDataCollectionTemplate"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="getDataCollectionTemplate"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="outputProfilesForDocument">
+      <http:operation location="QuickDoc/outputProfilesForDocument"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="outputProfilesForDocument"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="outputProfilesForDocument"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishAndReturnDocumentMultipleStream">
+      <http:operation location="QuickDoc/publishAndReturnDocumentMultipleStream"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="publishAndReturnDocumentMultipleStream"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="publishAndReturnDocumentMultipleStream"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="descriptionForDocument">
+      <http:operation location="QuickDoc/descriptionForDocument"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="descriptionForDocument"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="descriptionForDocument"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="categoriesForUser">
+      <http:operation location="QuickDoc/categoriesForUser"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="categoriesForUser"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="categoriesForUser"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getTemplateFields">
+      <http:operation location="QuickDoc/getTemplateFields"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="getTemplateFields"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="getTemplateFields"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishDocument">
+      <http:operation location="QuickDoc/publishDocument"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="publishDocument"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="publishDocument"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="thumbnailForDocument">
+      <http:operation location="QuickDoc/thumbnailForDocument"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="thumbnailForDocument"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="thumbnailForDocument"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="documentsForCategory">
+      <http:operation location="QuickDoc/documentsForCategory"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="documentsForCategory"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="documentsForCategory"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="designToolForDocument">
+      <http:operation location="QuickDoc/designToolForDocument"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="designToolForDocument"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="designToolForDocument"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="publishDocuments">
+      <http:operation location="QuickDoc/publishDocuments"/>
+      <wsdl:input>
+        <mime:content type="text/xml" part="publishDocuments"/>
+      </wsdl:input>
+      <wsdl:output>
+        <mime:content type="text/xml" part="publishDocuments"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="QuickDoc">
+    <wsdl:port name="QuickDocHttpSoap11Endpoint" binding="ns:QuickDocSoap11Binding">
+      <soap:address location="http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/"/>
+    </wsdl:port>
+    <wsdl:port name="QuickDocHttpEndpoint" binding="ns:QuickDocHttpBinding">
+      <http:address location="http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpEndpoint/"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint></con:endpoints><con:operation isOneWay="false" action="urn:categoriesForUser" name="categoriesForUser" bindingOperationName="categoriesForUser" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:categoriesForUser>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+      </web:categoriesForUser>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:categoriesForUser"/></con:call></con:operation><con:operation isOneWay="false" action="urn:descriptionForDocument" name="descriptionForDocument" bindingOperationName="descriptionForDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:descriptionForDocument>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+      </web:descriptionForDocument>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:descriptionForDocument"/></con:call></con:operation><con:operation isOneWay="false" action="urn:designToolForDocument" name="designToolForDocument" bindingOperationName="designToolForDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:designToolForDocument>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+      </web:designToolForDocument>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:designToolForDocument"/></con:call></con:operation><con:operation isOneWay="false" action="urn:documentsForCategory" name="documentsForCategory" bindingOperationName="documentsForCategory" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:documentsForCategory>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:categoryName>?</web:categoryName>
+      </web:documentsForCategory>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:documentsForCategory"/></con:call></con:operation><con:operation isOneWay="false" action="urn:getDataCollectionTemplate" name="getDataCollectionTemplate" bindingOperationName="getDataCollectionTemplate" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:getDataCollectionTemplate>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+         <!--Optional:-->
+         <web:customerData>?</web:customerData>
+      </web:getDataCollectionTemplate>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getDataCollectionTemplate"/></con:call></con:operation><con:operation isOneWay="false" action="urn:getTemplateFields" name="getTemplateFields" bindingOperationName="getTemplateFields" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:getTemplateFields>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+         <!--Optional:-->
+         <web:customerData>?</web:customerData>
+      </web:getTemplateFields>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:getTemplateFields"/></con:call></con:operation><con:operation isOneWay="false" action="urn:outputProfilesForDocument" name="outputProfilesForDocument" bindingOperationName="outputProfilesForDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:outputProfilesForDocument>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+      </web:outputProfilesForDocument>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:outputProfilesForDocument"/></con:call></con:operation><con:operation isOneWay="false" action="urn:publishAndReturnDocument" name="publishAndReturnDocument" bindingOperationName="publishAndReturnDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:publishAndReturnDocument>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+         <!--Optional:-->
+         <web:customerData>?</web:customerData>
+         <!--Optional:-->
+         <web:outputProfileName>?</web:outputProfileName>
+      </web:publishAndReturnDocument>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishAndReturnDocument"/></con:call></con:operation><con:operation isOneWay="false" action="urn:publishAndReturnDocumentMultipleStream" name="publishAndReturnDocumentMultipleStream" bindingOperationName="publishAndReturnDocumentMultipleStream" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:publishAndReturnDocumentMultipleStream>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+         <!--Optional:-->
+         <web:customerData>?</web:customerData>
+         <!--Optional:-->
+         <web:outputProfileName>?</web:outputProfileName>
+         <!--Optional:-->
+         <web:includeMetaData>?</web:includeMetaData>
+      </web:publishAndReturnDocumentMultipleStream>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishAndReturnDocumentMultipleStream"/></con:call></con:operation><con:operation isOneWay="false" action="urn:publishDocument" name="publishDocument" bindingOperationName="publishDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:publishDocument>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+         <!--Optional:-->
+         <web:customerData>?</web:customerData>
+         <!--Optional:-->
+         <web:outputProfileName>?</web:outputProfileName>
+      </web:publishDocument>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/></con:call><con:call name="WP_DW_WeeklyReport_01"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:publishDocument>
+         <!--Optional:-->
+         <web:requestContext><![CDATA[<RequestContext>
+<Credentials method="UserID and Password">
+<UserID>xDesigner</UserID>
+<Password>Pa55word</Password>
+</Credentials>
+<ApplicationName>Dreamweaver</ApplicationName>
+</RequestContext>]]]]>><![CDATA[</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>MonthlyReport.xdrwv</web:documentName>
+         <!--Optional:-->
+         <web:customerData><![CDATA[<?xml version="1.0"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="UsersHistoryAndIndexes.xml.xsd">
+	<user>
+		<id>P5zCrwdJ3giubpwVX2qTrg</id>
+		<external_id>foob123</external_id>
+		<index>null</index>
+		<username>foob_sssnsame</username>
+		<weight>1.23</weight>
+		<sports_activity>2</sports_activity>
+		<birth_date>1982-10-22</birth_date>
+		<email>john+doe@example.com</email>
+		<gender>female</gender>
+		<index_updated_at>1418323947</index_updated_at>
+		<index_history>
+			<last_value_date>2015-01-08</last_value_date>
+			<values>
+				<value>100.1</value>
+				<value>200.3</value>
+				<value>50</value>
+				<value>70</value>
+				<value>200</value>
+				<value>300</value>
+				<value>10</value>
+			</values>
+		</index_history>
+		<week_numbers>
+			<week_number>
+				<label>Steps</label>
+				<value>1000</value>
+				<color>green</color>
+			</week_number>
+			<week_number>
+				<label>Runs</label>
+				<value>2</value>
+				<color>green</color>
+			</week_number>
+			<week_number>
+				<label>Gym</label>
+				<value>1</value>
+				<color>red</color>
+			</week_number>
+		</week_numbers>
+	</user>
+</users>]]]]>><![CDATA[</web:customerData>
+         <!--Optional:-->
+         <web:outputProfileName>HTML to ArgoSoft</web:outputProfileName>
+      </web:publishDocument>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="urn:publishDocuments" name="publishDocuments" bindingOperationName="publishDocuments" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:publishDocuments>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Zero or more repetitions:-->
+         <web:documentPackageNames>?</web:documentPackageNames>
+         <!--Optional:-->
+         <web:outputProfileName>?</web:outputProfileName>
+         <!--Optional:-->
+         <web:customerData>?</web:customerData>
+      </web:publishDocuments>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocuments"/></con:call></con:operation><con:operation isOneWay="false" action="urn:thumbnailForDocument" name="thumbnailForDocument" bindingOperationName="thumbnailForDocument" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:thumbnailForDocument>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+      </web:thumbnailForDocument>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:thumbnailForDocument"/></con:call></con:operation><con:operation isOneWay="false" action="urn:versionsForDocumentWithWorkflowStatus" name="versionsForDocumentWithWorkflowStatus" bindingOperationName="versionsForDocumentWithWorkflowStatus" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:versionsForDocumentWithWorkflowStatus>
+         <!--Optional:-->
+         <web:requestContext>?</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>?</web:documentName>
+      </web:versionsForDocumentWithWorkflowStatus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:versionsForDocumentWithWorkflowStatus"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

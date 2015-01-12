@@ -4,21 +4,20 @@ var _debugFile = "C:/Users/admin/Desktop/debug.txt";
 
 if (_initLog) stringToFile("", _debugFile);
 
-var LineChartValues;
-
-function initLineChartValues() {
-	logMessage("INFO: init");
-	LineChartValues = [];
-}
-
-function addValueToLineChartValues(value) {
-	logMessage("INFO: add");
-	LineChartValues.push(value);
-}
-
-function displayLineChartValues() {
-	logMessage("INFO: display");
-	logMessage("INFO: " + LineChartValues.join(','));
+function createBarChartValuesAndGetName(v11, v12, v21, v22) {
+	if (v11.equals("null")) { v11 = 0; }
+	if (v12.equals("null")) { v21 = 0; }
+	if (v21.equals("null")) { v21 = 0; }
+	if (v22.equals("null")) { v22 = 0; }
+	try {
+		var ChartHelper = Packages.com.diy.charthelper.BarChartHelper();
+		var ImageLocation  = ChartHelper.generateWeeklyReviewBarChart(v11, v12, v21, v22);
+		ChartHelper = null;
+		logMessage("INFO - cbc: " + ImageLocation);
+		return ImageLocation;
+	} catch (err) {
+		logMessage("ERROR - cbc: " + err.message);
+	}
 }
 
 function createLineChartValuesAndGetName(v1, v2, v3, v4, v5, v6, v7) {
@@ -30,7 +29,6 @@ function createLineChartValuesAndGetName(v1, v2, v3, v4, v5, v6, v7) {
 	if (!v5.equals("null")) { ValuesArray.push(v5) }
 	if (!v6.equals("null")) { ValuesArray.push(v6) }
 	if (!v7.equals("null")) { ValuesArray.push(v7) }
-	//logMessage("INFO - clcn: " + ValuesArray);
 	var OutputFile = getLineChartFileName(ValuesArray)
 	return OutputFile;
 }
@@ -42,27 +40,10 @@ function getLineChartFileName(ValuesArray) {
 		var Values = ("" + ValuesArray).split(",");
 		var ImageLocation  = ChartHelper.generateWeeklyReviewLineChart(Values, "2015-01-08");
 		ChartHelper = null;
-		//logMessage("INFO - glcn: " + ImageLocation);
-		//logMessage("INFO - glcn: " + ValuesArray);
-		//logMessage("INFO - glcn: " + arguments.length);
 		return ImageLocation;
 	} catch (err) {
 		logMessage("ERROR - glcn: " + err.message);
 		return "KO";
-	}
-}
-
-function getLineChart(strPDF) {
-	try {
-		var u = "http://localhost/xpad3/PDFs/"+strPDF;
-		var x = Packages.com.diy.FilefromHTTP.URLCopy();
-		var b = x.getLocalFile(u, "C:/Temp");
-		b = "file:///"+b;
-		logMessage("INFO: " + b);
-		return b;
-	} catch (err) {
-		logMessage("ERROR: " + err.message);
-		return "";
 	}
 }
 
