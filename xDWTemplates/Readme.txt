@@ -14,6 +14,10 @@ Custom Code to post-process HTML to embed images
 		C:\Users\admin\git\WellnessProgramEclipseProjects\xCustomize\bin\com\diy
 		to
 		C:\xStuff\4.5SP1B13\jboss-as-7.1.1.Final\standalone\deployments\xPression.ear\UniArch_Admin.war\WEB-INF\classes\com
+	- Copy MailWorker.class from
+		C:\Users\admin\git\WellnessProgramEclipseProjects\xCustomize\bin\com\dsc\uniarch\admin\distributionservice
+		to
+		C:\xStuff\4.5SP1B13\jboss-as-7.1.1.Final\standalone\deployments\xPression.ear\UniArch_Admin.war\WEB-INF\classes\com\dsc\uniarch\admin\distributionservice
 	- Copy JARs from
 		C:\xStuff\4.5SP1B13\jboss-as-7.1.1.Final\standalone\deployments\xDocxa.war\WEB-INF\lib
 		to

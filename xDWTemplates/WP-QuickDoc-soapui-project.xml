@@ -833,7 +833,7 @@
          <web:outputProfileName>?</web:outputProfileName>
       </web:publishDocument>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/></con:call><con:call name="WP_DW_WeeklyReport_01"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/></con:call><con:call name="WP_DW_WeeklyReport_01_Local"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
    <soapenv:Header/>
    <soapenv:Body>
       <web:publishDocument>
@@ -846,7 +846,7 @@
 <ApplicationName>Dreamweaver</ApplicationName>
 </RequestContext>]]]]>><![CDATA[</web:requestContext>
          <!--Optional:-->
-         <web:documentName>MonthlyReport.xdrwv</web:documentName>
+         <web:documentName>WeeklyReport.xdrwv</web:documentName>
          <!--Optional:-->
          <web:customerData><![CDATA[<?xml version="1.0"?>
 <users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="UsersHistoryAndIndexes.xml.xsd">
@@ -854,12 +854,12 @@
 		<id>P5zCrwdJ3giubpwVX2qTrg</id>
 		<external_id>foob123</external_id>
 		<index>null</index>
-		<username>foob_sssnsame</username>
+		<username>Edvardas</username>
 		<weight>1.23</weight>
 		<sports_activity>2</sports_activity>
 		<birth_date>1982-10-22</birth_date>
-		<email>john+doe@example.com</email>
-		<gender>female</gender>
+		<email>svinchon@gmail.com</email>
+		<gender>male</gender>
 		<index_updated_at>1418323947</index_updated_at>
 		<index_history>
 			<last_value_date>2015-01-08</last_value_date>
@@ -870,7 +870,7 @@
 				<value>70</value>
 				<value>200</value>
 				<value>300</value>
-				<value>10</value>
+				<value>350</value>
 			</values>
 		</index_history>
 		<week_numbers>
@@ -894,6 +894,69 @@
 </users>]]]]>><![CDATA[</web:customerData>
          <!--Optional:-->
          <web:outputProfileName>HTML to ArgoSoft</web:outputProfileName>
+      </web:publishDocument>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/><con:wsrmConfig version="1.2"/></con:call><con:call name="WP_DW_WeeklyReport_01_IIGGW"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:publishDocument>
+         <!--Optional:-->
+         <web:requestContext><![CDATA[<RequestContext>
+<Credentials method="UserID and Password">
+<UserID>xDesigner</UserID>
+<Password>Pa55word</Password>
+</Credentials>
+<ApplicationName>Dreamweaver</ApplicationName>
+</RequestContext>]]]]>><![CDATA[</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>WeeklyReport.xdrwv</web:documentName>
+         <!--Optional:-->
+         <web:customerData><![CDATA[<?xml version="1.0"?>
+<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="UsersHistoryAndIndexes.xml.xsd">
+	<user>
+		<id>P5zCrwdJ3giubpwVX2qTrg</id>
+		<external_id>foob123</external_id>
+		<index>null</index>
+		<username>Edvardas</username>
+		<weight>1.23</weight>
+		<sports_activity>2</sports_activity>
+		<birth_date>1982-10-22</birth_date>
+		<email>edvardas@aconnected.co</email>
+		<gender>male</gender>
+		<index_updated_at>1418323947</index_updated_at>
+		<index_history>
+			<last_value_date>2015-01-08</last_value_date>
+			<values>
+				<value>100.1</value>
+				<value>200.3</value>
+				<value>50</value>
+				<value>70</value>
+				<value>200</value>
+				<value>300</value>
+				<value>350</value>
+			</values>
+		</index_history>
+		<week_numbers>
+			<week_number>
+				<label>Steps</label>
+				<value>1000</value>
+				<color>green</color>
+			</week_number>
+			<week_number>
+				<label>Runs</label>
+				<value>2</value>
+				<color>green</color>
+			</week_number>
+			<week_number>
+				<label>Gym</label>
+				<value>1</value>
+				<color>red</color>
+			</week_number>
+		</week_numbers>
+	</user>
+</users>]]]]>><![CDATA[</web:customerData>
+         <!--Optional:-->
+         <web:outputProfileName>HTML to French Cloud SMTP</web:outputProfileName>
       </web:publishDocument>
    </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="urn:publishDocuments" name="publishDocuments" bindingOperationName="publishDocuments" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
@@ -930,4 +993,4 @@
          <web:documentName>?</web:documentName>
       </web:versionsForDocumentWithWorkflowStatus>
    </soapenv:Body>
-</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:versionsForDocumentWithWorkflowStatus"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:versionsForDocumentWithWorkflowStatus"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:sensitiveInformation/></con:soapui-project>
