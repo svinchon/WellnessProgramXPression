@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0074)file:///C:/GIT/WellnessProgramXPression/xDWTemplates/xMonthlyReport02.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #42413C;
+	magin: 0;
+	padding: 0;
+	color: #000;
+}
+p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: white;
+	font-size: 12px;
+}
+.container {
+	background-image: url(file:///C:/GIT/WellnessProgramXPression/xDWTemplates/Graphics/Empty.png);
+	width: 390px;
+	margin: 0 auto;
+	height: 471px;
+}
+.header {
+	height: 52px;
+}
+.content_outer_div {
+	display: table; 
+	width: 390px;
+	height: 400px;
+	//overflow: hidden;
+}
+.content_inner_div {
+ 	display: table-cell;
+	vertical-align: middle;
+}
+.footer {
+	padding: 10px 0;
+	background-color: #FFF;
+	text-align: center;
+	font-size: 12px;
+}
+-->
+</style>
+</head>
+<body>
+    <div class="container">
+        <div>
+            <table border="1">
+				<tr>
+					<td><img src="" /></td>
+				</tr>
+			</table>
+        </div>
+        <!-- end .header -->
+        <div class="content_outer_div">
+            <div class="content_inner_div">
+                <p> Hi <xpresso type="text" id="19103029320" name="username" variable="user:username" disformat="null" hideflag="false" searchflag="true">{username}</xpresso> Milda, </p>
+                <p> Congratulations! </p>
+                <p> You did great this month.</p>
+<xpresso type="text" id="19154146427" name="createLineChartValuesAndGetName" variable="createLineChartValuesAndGetName" hideflag="false" searchflag="true"><img src="file:///C:/GIT/WellnessProgramXPression/xDWTemplates/%7BcreateLineChartValuesAndGetName%7D"></xpresso> <xpresso type="text" id="19165912015" name="createBarChartValuesAndGetName" variable="createBarChartValuesAndGetName" hideflag="false" searchflag="true"><img src="file:///C:/GIT/WellnessProgramXPression/xDWTemplates/%7BcreateBarChartValuesAndGetName%7D"></xpresso></div>
+        </div>
+        <div class="footer">
+            Copyrights VITEX®
+        </div>
+        <!-- end .footer -->
+    </div><!-- end .container -->
+
+
+<varsglobaltag>
+  <dspstate>
+    <dspshow value="false">
+    <dsphide value="true">
+    <dspsearch value="false">
+  </dspsearch></dsphide></dspshow></dspstate>
+  <vdpstate>
+    <vdpshow value="true">
+    <vdpsearch value="false">
+  </vdpsearch></vdpshow></vdpstate>
+  <nspstate>
+    <nspsearch value="false">
+    <nspshow value="false">
+  </nspshow></nspsearch></nspstate>
+</varsglobaltag>
+<parseschema><node id="/user"></node>
+<node id="/user/id" datatype="string"></node>
+<node id="/user/external_id" datatype="string"></node>
+<node id="/user/index" datatype="string"></node>
+<node id="/user/username" datatype="string"></node>
+<node id="/user/weight" datatype="float"></node>
+<node id="/user/sports_activity" datatype="integer"></node>
+<node id="/user/birth_date" datatype="date"></node>
+<node id="/user/email" datatype="string"></node>
+<node id="/user/gender" datatype="string"></node>
+<node id="/user/index_updated_at" datatype="integer"></node>
+<node id="/user/index_history"></node>
+<node id="/user/index_history/last_value_date" datatype="date"></node>
+<node id="/user/index_history/values"></node>
+<node id="/user/index_history/values/value" datatype="float"></node>
+<node id="/user/week_numbers"></node>
+<node id="/user/week_numbers/week_number"></node>
+<node id="/user/week_numbers/week_number/label" datatype="string"></node>
+<node id="/user/week_numbers/week_number/value" datatype="float"></node>
+<node id="/user/week_numbers/week_number/color" datatype="string"></node>
+</parseschema><rawschema><!--?xml version="1.0" encoding="UTF-8"?-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementformdefault="qualified">
+  <xs:element name="users">
+    <xs:complextype>
+      <xs:sequence>
+        <xs:element maxoccurs="unbounded" ref="user">
+      </xs:element></xs:sequence>
+    </xs:complextype>
+  </xs:element>
+  <xs:element name="user">
+    <xs:complextype>
+      <xs:sequence>
+        <xs:element ref="id">
+        <xs:element ref="external_id">
+        <xs:element ref="index">
+        <xs:element ref="username">
+        <xs:element ref="weight">
+        <xs:element ref="sports_activity">
+        <xs:element ref="birth_date">
+        <xs:element ref="email">
+        <xs:element ref="gender">
+        <xs:element ref="index_updated_at">
+        <xs:element ref="index_history">
+        <xs:element ref="week_numbers">
+      </xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:sequence>
+    </xs:complextype>
+  </xs:element>
+  <xs:element name="id" type="xs:NCName">
+  <xs:element name="external_id" type="xs:NCName">
+  <xs:element name="index" type="xs:NCName">
+  <xs:element name="username" type="xs:NCName">
+  <xs:element name="weight" type="xs:decimal">
+  <xs:element name="sports_activity" type="xs:integer">
+  <xs:element name="birth_date" type="xs:date">
+  <xs:element name="email" type="xs:string">
+  <xs:element name="gender" type="xs:NCName">
+  <xs:element name="index_updated_at" type="xs:integer">
+  <xs:element name="index_history">
+    <xs:complextype>
+      <xs:sequence>
+        <xs:element ref="last_value_date">
+        <xs:element ref="values">
+      </xs:element></xs:element></xs:sequence>
+    </xs:complextype>
+  </xs:element>
+  <xs:element name="last_value_date" type="xs:date">
+  <xs:element name="values">
+    <xs:complextype>
+      <xs:sequence>
+        <xs:element maxoccurs="unbounded" ref="value">
+      </xs:element></xs:sequence>
+    </xs:complextype>
+  </xs:element>
+  <xs:element name="week_numbers">
+    <xs:complextype>
+      <xs:sequence>
+        <xs:element maxoccurs="unbounded" ref="week_number">
+      </xs:element></xs:sequence>
+    </xs:complextype>
+  </xs:element>
+  <xs:element name="week_number">
+    <xs:complextype>
+      <xs:sequence>
+        <xs:element ref="label">
+        <xs:element ref="value">
+        <xs:element ref="color">
+      </xs:element></xs:element></xs:element></xs:sequence>
+    </xs:complextype>
+  </xs:element>
+  <xs:element name="label" type="xs:NCName">
+  <xs:element name="color" type="xs:NCName">
+  <xs:element name="value" type="xs:decimal">
+</xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:element></xs:schema></rawschema><schemaname name="UsersHistoryAndIndexes.xml.xsd"></schemaname>
+<tabledefs>
+  <tabledef name="user" id="1" exptype="schema" expression="/user" position="1" selfadaptive="true" searchflag="false">
+    <vardef name="id" id="2" type="string" exptype="XPath" expression="/user/id" disformat="null" position="2" selfadaptive="true" searchflag="false"></vardef>
+    <vardef name="external_id" id="3" type="string" exptype="XPath" expression="/user/external_id" disformat="null" position="3" selfadaptive="true" searchflag="false"></vardef>
+    <vardef name="index" id="4" type="string" exptype="XPath" expression="/user/index" disformat="null" position="4" selfadaptive="true" searchflag="false"></vardef>
+    <vardef name="username" id="5" type="string" exptype="XPath" expression="/user/username" disformat="null" position="5" selfadaptive="true" searchflag="false"></vardef>
+    <vardef name="weight" id="6" type="float" exptype="XPath" expression="/user/weight" disformat="null" position="6" selfadaptive="true" searchflag="false"></vardef>
+    <vardef name="sports_activity" id="7" type="integer" exptype="XPath" expression="/user/sports_activity" disformat="null" position="7" selfadaptive="true" searchflag="false"></vardef>
+    <vardef name="birth_date" id="8" type="date" exptype="XPath" expression="/user/birth_date" disformat="null" position="8" selfadaptive="true" searchflag="false"></vardef>
+    <vardef name="email" id="9" type="string" exptype="XPath" expression="/user/email" disformat="null" position="9" selfadaptive="true" searchflag="false"></vardef>
+    <vardef name="gender" id="10" type="string" exptype="XPath" expression="/user/gender" disformat="null" position="10" selfadaptive="true" searchflag="false"></vardef>
+    <vardef name="index_updated_at" id="11" type="integer" exptype="XPath" expression="/user/index_updated_at" disformat="null" position="11" selfadaptive="true" searchflag="false"></vardef>
+  </tabledef>
+  <tabledef name="values" id="13" exptype="schema" expression="/user/index_history/values/value" position="13" selfadaptive="true" searchflag="false">
+    <vardef name="value" id="14" type="integer" exptype="XPath" expression="/user/index_history/values/value" disformat="null" position="14" selfadaptive="true" searchflag="false"></vardef>
+  </tabledef>
+</tabledefs>
+<vardefs>
+  <vardef name="IndexVal1" id="20" type="string" exptype="XPath" expression="/user/index_history/values/value[1]" disformat="null" position="20" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="IndexVal2" id="21" type="string" exptype="XPath" expression="/user/index_history/values/value[2]" disformat="null" position="21" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="IndexVal3" id="22" type="string" exptype="XPath" expression="/user/index_history/values/value[3]" disformat="null" position="22" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="IndexVal4" id="23" type="string" exptype="XPath" expression="/user/index_history/values/value[4]" disformat="null" position="23" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="IndexVal5" id="25" type="string" exptype="XPath" expression="/user/index_history/values/value[5]" disformat="null" position="25" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="IndexVal6" id="26" type="string" exptype="XPath" expression="/user/index_history/values/value[6]" disformat="null" position="26" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="IndexVal7" id="27" type="string" exptype="XPath" expression="/user/index_history/values/value[7]" disformat="null" position="27" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="createLineChartValuesAndGetName" id="28" type="string" exptype="JavaScript" expression="createLineChartValuesAndGetName(IndexVal1, IndexVal2, IndexVal3, IndexVal4, IndexVal5, IndexVal6, IndexVal7)" disformat="null" position="28" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="Bar1Val1" id="30" type="string" exptype="JavaScript" expression="&#39;30&#39;" disformat="null" position="30" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="Bar1Val2" id="31" type="string" exptype="JavaScript" expression="&#39;70&#39;" disformat="null" position="31" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="Bar2Val1" id="32" type="string" exptype="JavaScript" expression="&#39;70&#39;" disformat="null" position="32" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="Bar2Val2" id="33" type="string" exptype="JavaScript" expression="&#39;30&#39;" disformat="null" position="33" selfadaptive="false" searchflag="false"></vardef>
+  <vardef name="createBarChartValuesAndGetName" id="34" type="string" exptype="JavaScript" expression="createBarChartValuesAndGetName(Bar1Val1, Bar1Val2, Bar2Val1, Bar2Val2)" disformat="null" position="34" selfadaptive="false" searchflag="false"></vardef>
+</vardefs>
+<globaljssetting>
+  <globaljs id="1" name="WPJSL1" type="external" reference="C:\GIT\WellnessProgramXPression\xDWTemplates\JS\WellnessProgramJSLibrary1.js"></globaljs>
+</globaljssetting>
+<lastxml path="file:///C|/GIT/WellnessProgramXPression/xDWTemplates/UsersHistoryAndIndexes.xml"></lastxml>
+<folderdefs></folderdefs>
+
+<publishready status="true"></publishready>
+</body></html>
