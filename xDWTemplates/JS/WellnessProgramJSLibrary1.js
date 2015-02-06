@@ -1,6 +1,7 @@
 var _debug = true;
 var _initLog = false;
 var _debugFile = "C:/Users/admin/Desktop/debug.txt";
+_debugFile = "C:/Users/admin/Desktop/Folders/Files/debug.txt";
 
 if (_initLog) stringToFile("", _debugFile);
 
