@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<users xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="MonthlyReport.xml.xsd">
+<users>
 	<user>
 		<badge_number>123456</badge_number>
 		<username>Edvardas</username>
