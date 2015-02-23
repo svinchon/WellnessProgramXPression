@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MigrationSpec>
+  <PdpFile name="C:\Users\admin\Desktop\WRB_MigrationPDP.pdpx" />
+  <Object type="attrset" name="Empty" />
+  <Object type="datasourcegroup" name="WellnessProgram_xPresso" />
+  <Object type="category" name="WellnessProgram_xPresso" />
+  <xPressoPackage name="WeeklyReport_Batch.xdrwv" whichObj="all" version="1.0" incfont="no" />
+</MigrationSpec>
+

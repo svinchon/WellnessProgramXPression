@@ -5,6 +5,19 @@ _debugFile = "C:/Users/admin/Desktop/Folders/Files/debug.txt";
 
 if (_initLog) stringToFile("", _debugFile);
 
+function getMonthlyReportLineChartFromXML(xml) {
+	logMessage("INFO - getMonthlyReportLineChartFromXML: " + xml);
+	try {
+		var ChartHelper = Packages.com.diy.charthelper.XML2ChartHelper();
+		var ImageLocation  = ChartHelper.generatTSChartFromXML(xml);
+		ChartHelper = null;
+		logMessage("INFO - getMonthlyReportLineChartFromXML: " + ImageLocation);
+		return ImageLocation;
+	} catch (err) {
+		logMessage("ERROR - getMonthlyReportLineChartFromXML: " + err.message);
+	}
+}
+
 function createBarChartValuesAndGetName(v11, v12, v21, v22) {
 	if (v11.equals("null")) { v11 = 0; }
 	if (v12.equals("null")) { v21 = 0; }

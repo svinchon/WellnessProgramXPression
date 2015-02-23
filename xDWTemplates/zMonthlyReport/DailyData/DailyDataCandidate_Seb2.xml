@@ -1,0 +1,20 @@
+<daily_data>
+	<daily_member_data>
+		<id>P5zCrwdJ3giubpwVX2qTrg</id><!-- Patient ID, can be a copy of XDS format PatientID -->
+		<member_id>123456</member_id><!-- badge_id for link to personal data -->
+		<!-- all other non changing personal data (birth_date, email, gender...) moved in separate XML -->
+		<weight>90</weight>
+		<daily_index_value>350</daily_index_value>
+		<date_stamp>2015-02-10</date_stamp>
+		<indicators><!-- for future use, optional for now -->
+			<indicator><!-- 0 to N occurrences -->
+				<type>Steps</type>
+				<value>80</value><!-- absolute value or versus goal? -->
+			</indicator>
+			<indicator>
+				<label>Runs</label>
+				<value>30</value>
+			</indicator>
+		</indicators>
+	</daily_member_data>
+</daily_data>

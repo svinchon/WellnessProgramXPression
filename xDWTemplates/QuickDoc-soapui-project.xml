@@ -959,6 +959,42 @@
          <web:outputProfileName>HTML to French Cloud SMTP</web:outputProfileName>
       </web:publishDocument>
    </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/><con:wsrmConfig version="1.2"/></con:call><con:call name="WP_DW_MonthlyReport_01_Local"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:publishDocument>
+         <!--Optional:-->
+         <web:requestContext><![CDATA[<RequestContext>
+<Credentials method="UserID and Password">
+<UserID>xDesigner</UserID>
+<Password>Pa55word</Password>
+</Credentials>
+<ApplicationName>Dreamweaver</ApplicationName>
+</RequestContext>]]]]>><![CDATA[</web:requestContext>
+         <!--Optional:-->
+         <web:documentName>MonthlyReport.xdrwv</web:documentName>
+         <!--Optional:-->
+         <web:customerData><![CDATA[<MonthlyReports>
+  <MonthlyReport>
+    <badge_number>123457</badge_number>
+    <email>svinchon@corp.com</email>
+    <first_name>Dmitry</first_name>
+    <last_name>Etin</last_name>
+    <gender>male</gender>
+    <update_date>2015-02-15</update_date>
+    <first_date>2015-01-18</first_date>
+    <award_threshold>300</award_threshold>
+    <days_above_threshold>0</days_above_threshold>
+    <award>false</award>
+    <index_history_nvp>2015-01-19=0;2015-01-20=0;2015-01-21=0;2015-01-22=0;2015-01-23=0;2015-01-24=0;2015-01-25=0;2015-01-26=0;2015-01-27=0;2015-01-28=0;2015-01-29=0;2015-01-30=0;2015-01-31=0;2015-02-01=0;2015-02-02=0;2015-02-03=0;2015-02-04=0;2015-02-05=0;2015-02-06=0;2015-02-07=0;2015-02-08=0;2015-02-09=0;2015-02-10=0;2015-02-11=0;2015-02-12=0;2015-02-13=0;2015-02-14=100;2015-02-15=0</index_history_nvp>
+    <index_history_csv>Categories;2015-01-19;2015-01-20;2015-01-21;2015-01-22;2015-01-23;2015-01-24;2015-01-25;2015-01-26;2015-01-27;2015-01-28;2015-01-29;2015-01-30;2015-01-31;2015-02-01;2015-02-02;2015-02-03;2015-02-04;2015-02-05;2015-02-06;2015-02-07;2015-02-08;2015-02-09;2015-02-10;2015-02-11;2015-02-12;2015-02-13;2015-02-14;2015-02-15#Serie 1;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;0;100;0</index_history_csv>
+    <index_history_xml>&lt;chart_data>&lt;categories>&lt;title>Date&lt;/title>&lt;values>&lt;value>2015-01-19&lt;/value>&lt;value>2015-01-20&lt;/value>&lt;value>2015-01-21&lt;/value>&lt;value>2015-01-22&lt;/value>&lt;value>2015-01-23&lt;/value>&lt;value>2015-01-24&lt;/value>&lt;value>2015-01-25&lt;/value>&lt;value>2015-01-26&lt;/value>&lt;value>2015-01-27&lt;/value>&lt;value>2015-01-28&lt;/value>&lt;value>2015-01-29&lt;/value>&lt;value>2015-01-30&lt;/value>&lt;value>2015-01-31&lt;/value>&lt;value>2015-02-01&lt;/value>&lt;value>2015-02-02&lt;/value>&lt;value>2015-02-03&lt;/value>&lt;value>2015-02-04&lt;/value>&lt;value>2015-02-05&lt;/value>&lt;value>2015-02-06&lt;/value>&lt;value>2015-02-07&lt;/value>&lt;value>2015-02-08&lt;/value>&lt;value>2015-02-09&lt;/value>&lt;value>2015-02-10&lt;/value>&lt;value>2015-02-11&lt;/value>&lt;value>2015-02-12&lt;/value>&lt;value>2015-02-13&lt;/value>&lt;value>2015-02-14&lt;/value>&lt;value>2015-02-15&lt;/value>&lt;/values>&lt;/categories>&lt;series>&lt;serie>&lt;title>Index&lt;/title>&lt;values>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>0&lt;/value>&lt;value>100&lt;/value>&lt;value>0&lt;/value>&lt;/values>&lt;/serie>&lt;/series>&lt;/chart_data></index_history_xml>
+  </MonthlyReport>
+</MonthlyReports>]]]]>><![CDATA[</web:customerData>
+         <!--Optional:-->
+         <web:outputProfileName>HTML to ArgoSoft</web:outputProfileName>
+      </web:publishDocument>
+   </soapenv:Body>
 </soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:publishDocument"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="urn:publishDocuments" name="publishDocuments" bindingOperationName="publishDocuments" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://192.168.157.128:8080/xFramework/services/QuickDoc.QuickDocHttpSoap11Endpoint/</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.framework.xprs.dsc.com">
    <soapenv:Header/>
    <soapenv:Body>

@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<users>
+	<user><!-- possibly multiple occurrences -->
+		<id>P5zCrwdJ3giubpwVX2qTrg</id>
+		<external_id>123456</external_id><!-- badge_id for link to personal data -->
+		<username>svinchon</username><!-- probably not needed or in personal data -->
+		<weight>90</weight>
+		<sports_activity></sports_activity><!-- not sure what the possible values are and what they mean, multiple choice probably needed -->
+		<birth_date>1971-12-14</birth_date>
+		<email>svinchon@corp.com</email>
+		<gender>male</gender>
+		<index_value>350</index_value>
+		<update_date>2015-02-10</updated_at>
+		<update_id>2015-02-10_A</update_id>
+		<indicators>
+			<indicator><!-- 1 to N occurrences -->
+				<label>Steps</label>
+				<value>80</value>
+				<highlight>good</highlight><!-- can be used to determine how to display -->
+			</indicator>
+			<indicator>
+				<label>Runs</label>
+				<value>30</value>
+				<highlight>bad</highlight>
+			</indicator>
+			<indicator>
+				<label>Gym</label>
+				<value>49</value>
+				<highlight>medium</highlight>
+			</indicator>
+		</indicators>
+	</user>
+</users>

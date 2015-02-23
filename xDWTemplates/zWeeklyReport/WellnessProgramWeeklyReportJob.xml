@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Job>
+<Job version="2.0">
+  <xPressionPublishJob
+  	outputProfileName="HTML to French Cloud SMTP"
+	deletePreviousJobsFirst="no"
+	threadPoolSize="" streamingThreadPoolSize=""
+	preserveDataInputOrder="false"
+	nextTasksNumber=""
+	jobLevel="3">
+    <xPRSInstantiate
+		name="WellnessProgramWeeklyReport"
+		invalidCustomerRecordOutputFile=""
+		errorRecordsPath="C:\Users\admin\Desktop\"
+		errorRecordsFile="JobErrorRecords_{JobRunID}_WellnessProgramWeeklyReport.xml"
+		enableErrRecordsOutput="enable"
+		repository="CR" category="WellnessProgram_xPresso"
+		dataSourceGroup="WellnessProgram_xPresso" dataSource="WellnessProgram_xPresso.xml"
+		documentPackage="" keyPath="/users/user/id" xPRSDocumentCR="/WeeklyReport_Batch.xdrwv?version=LATEST"
+		xprsDataTriggerXpath=""
+		docSource="literal"
+	/>
+    <JobLog logLevel="DEBUG"
+		logPath="C:\xStuff\4.5SP1B13\xPression\"
+		logFile="Job_{JobRunID}.log"
+		errorThreshold="100"
+		appendToExisting="no"
+	/>
+  </xPressionPublishJob>
+</Job>
+

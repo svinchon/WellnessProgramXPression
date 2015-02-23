@@ -1,0 +1,34 @@
+
+// Very interesting but will it work in email or inside an xCP screen?
+http://api.highcharts.com/highcharts#chart
+http://jsfiddle.net/gh/get/jquery/1.7.2/highslide-software/highcharts.com/tree/master/samples/highcharts/chart/bordercolor/
+http://www.highcharts.com/studies/data-from-xml.htm
+http://www.highcharts.com/docs/getting-started/your-first-chart
+
+// created web service that turn xml into png
+<LineChart>
+	<Title></Title>
+	<Labels>
+		<Label>Week 1</Label>
+		<Label>Week 2</Label>
+		<Label>Week 3</Label>
+	</Labels>
+	<DataSets>
+		<DataSet>
+			<Label>Serie 1</Label>
+			<Values>
+				<Value>300</Value>
+				<Value>350</Value>
+				<Value>350</Value>
+			</Values>
+		</DataSet>
+		<DataSet>
+			<Label>Serie 2</Label>
+			<Values>
+				<Value>200</Value>
+				<Value>150</Value>
+				<Value>350</Value>
+			</Values>
+		</DataSet>
+	</DataSets>
+</LineChart>

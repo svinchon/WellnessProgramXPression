@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #42413C;
+	magin: 0;
+	padding: 0;
+	color: #000;
+}
+p {
+	margin-top: 0;
+	padding-right: 15px;
+	padding-left: 15px;
+	color: white;
+	font-size: 12px;
+}
+.container {
+	background-image: url(http://xpression45.iigfrance.com/xGraphics/Empty.png);
+	width: 390px;
+	margin: 0 auto;
+	height: 471px;
+}
+.header {
+	height: 52px;
+	background-color: #FFF;
+}
+.content_outer_div {
+	display: table;
+	width: 390px;
+	height: 400px;
+	//overflow: hidden;
+	background-color: #393;
+}
+.content_inner_div {
+ 	display: table-cell;
+	vertical-align: middle;
+}
+.footer {
+	padding: 10px 0;
+	background-color: #FFF;
+	text-align: center;
+	font-size: 12px;
+}
+-->
+</style>
+</head>
+<body style="margin-top:0;margin-bottom:0;margin-right:0;margin-left:0;padding-top:0;padding-bottom:0;padding-right:0;padding-left:0;font-family:'Helvetica Neue',Arial,Helvetica,sans-serif;font-size:14px">
+<table width="100%" cellpadding="0" cellspacing="0" height="100%" style="background-color:#eeeeee"">
+<tr><td>&nbsp;</td></tr>
+<tr height="100%">
+<td height="100%" align="center">
+<table width="350" cellpadding="0" cellspacing="0" bgcolor="#ffffff" border="0" style="border-radius:10px 10px 10px 10px;background-color:#ffffff">
+<tr>
+<td width="350" align="center"><img src="http://xpression45.iigfrance.com/xGraphics/EmailLogoSmall.png" /></td>
+</tr>
+<tr height="500">
+<td height="500" width="350" align="center" style="color:#000000;background-image: url(http://xpression45.iigfrance.com/xGraphics/BG1.png); background-color: #006633"> Hello <br/>
+<br />
+Congratulations!<br/>
+You did great this week<br/>
+<br/>
+<xPresso type="text" id="12001331884" name="getMonthlyLineChart" variable="getMonthlyLineChart" hideFlag="false" searchFlag="true"><img src="{getMonthlyLineChart}" /></xPresso>
+<br/><br/>
+<br/>
+</td>
+</tr>
+<tr>
+<td width="350" align="center" style="font-size:12px"><br/>VITEX® powered by xCP® & xPression® by EMC®<br/>&nbsp;</td>
+</tr>
+</table>
+<tr><td>&nbsp;</td></tr>
+</td>
+</tr>
+</table>
+</body></html>
+<VarsGlobalTag>
+  <DSPState>
+    <DSPshow value="false"/>
+    <DSPhide value="true"/>
+    <DSPsearch value="false"/>
+  </DSPState>
+  <VDPState>
+    <VDPshow value="true"/>
+    <VDPsearch value="false"/>
+  </VDPState>
+  <NSPState>
+    <NSPsearch value="false"/>
+    <NSPshow value="false"/>
+  </NSPState>
+</VarsGlobalTag>
+<ParseSchema><node id='/MonthlyReport'></node>
+<node id='/MonthlyReport/badge_number' dataType='integer'></node>
+<node id='/MonthlyReport/email' dataType='string'></node>
+<node id='/MonthlyReport/first_name' dataType='string'></node>
+<node id='/MonthlyReport/last_name' dataType='string'></node>
+<node id='/MonthlyReport/gender' dataType='string'></node>
+<node id='/MonthlyReport/update_date' dataType='string'></node>
+<node id='/MonthlyReport/first_date' dataType='string'></node>
+<node id='/MonthlyReport/award_threshold' dataType='integer'></node>
+<node id='/MonthlyReport/days_above_threshold' dataType='integer'></node>
+<node id='/MonthlyReport/award' dataType='boolean'></node>
+<node id='/MonthlyReport/index_history_nvp' dataType='string'></node>
+<node id='/MonthlyReport/index_history_csv' dataType='string'></node>
+<node id='/MonthlyReport/index_history_xml' dataType='string'></node>
+</ParseSchema><RawSchema><?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="MonthlyReports">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="MonthlyReport"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MonthlyReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="badge_number"/>
+        <xs:element ref="email"/>
+        <xs:element ref="first_name"/>
+        <xs:element ref="last_name"/>
+        <xs:element ref="gender"/>
+        <xs:element ref="update_date"/>
+        <xs:element ref="first_date"/>
+        <xs:element ref="award_threshold"/>
+        <xs:element ref="days_above_threshold"/>
+        <xs:element ref="award"/>
+        <xs:element ref="index_history_nvp"/>
+        <xs:element ref="index_history_csv"/>
+        <xs:element ref="index_history_xml"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="badge_number" type="xs:integer"/>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="first_name" type="xs:NCName"/>
+  <xs:element name="last_name" type="xs:NCName"/>
+  <xs:element name="gender" type="xs:NCName"/>
+  <xs:element name="update_date" type="xs:NMTOKEN"/>
+  <xs:element name="first_date" type="xs:NMTOKEN"/>
+  <xs:element name="award_threshold" type="xs:integer"/>
+  <xs:element name="days_above_threshold" type="xs:integer"/>
+  <xs:element name="award" type="xs:boolean"/>
+  <xs:element name="index_history_nvp" type="xs:string"/>
+  <xs:element name="index_history_csv" type="xs:string"/>
+  <xs:element name="index_history_xml" type="xs:string"/>
+</xs:schema></RawSchema><SchemaName name="MonthlyReportXQResult.xml.xsd"></SchemaName>
+<TableDefs>
+  <TableDef name="MonthlyReport" id="29" expType="schema" expression="/MonthlyReport" position="29" selfAdaptive="true" searchFlag="false">
+    <VarDef name="badge_number" id="30" type="integer" expType="XPath" expression="/MonthlyReport/badge_number" disFormat="null" position="30" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="email" id="31" type="string" expType="XPath" expression="/MonthlyReport/email" disFormat="null" position="31" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="first_name" id="32" type="string" expType="XPath" expression="/MonthlyReport/first_name" disFormat="null" position="32" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="last_name" id="33" type="string" expType="XPath" expression="/MonthlyReport/last_name" disFormat="null" position="33" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="gender" id="34" type="string" expType="XPath" expression="/MonthlyReport/gender" disFormat="null" position="34" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="update_date" id="35" type="string" expType="XPath" expression="/MonthlyReport/update_date" disFormat="null" position="35" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="first_date" id="36" type="string" expType="XPath" expression="/MonthlyReport/first_date" disFormat="null" position="36" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="award_threshold" id="37" type="integer" expType="XPath" expression="/MonthlyReport/award_threshold" disFormat="null" position="37" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="days_above_threshold" id="38" type="integer" expType="XPath" expression="/MonthlyReport/days_above_threshold" disFormat="null" position="38" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="award" id="39" type="boolean" expType="XPath" expression="/MonthlyReport/award" disFormat="null" position="39" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="index_history_nvp" id="40" type="string" expType="XPath" expression="/MonthlyReport/index_history_nvp" disFormat="null" position="40" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="index_history_csv" id="41" type="string" expType="XPath" expression="/MonthlyReport/index_history_csv" disFormat="null" position="41" selfAdaptive="true" searchFlag="false"></VarDef>
+    <VarDef name="index_history_xml" id="42" type="string" expType="XPath" expression="/MonthlyReport/index_history_xml" disFormat="null" position="42" selfAdaptive="true" searchFlag="false"></VarDef>
+  </TableDef>
+</TableDefs>
+<VarDefs>
+  <VarDef name="getMonthlyLineChart" id="43" type="string" expType="JavaScript" expression="getMontlyLineChart(MonthlyReport.index_history_xml)" disFormat="null" position="43" selfAdaptive="false" searchFlag="false"></VarDef>
+</VarDefs>
+<GlobalJSSetting>
+  <GlobalJS id="1" name="WPJSL1" type="external" reference="C:\GIT\WellnessProgramXPression\xDWTemplates\JS\WellnessProgramJSLibrary1.js"></GlobalJS>
+</GlobalJSSetting>
+<LastXML path="file:///C|/GIT/WellnessProgramXPression/xDWTemplates/UsersHistoryAndIndexes.xml"></LastXML>
+<FolderDefs></FolderDefs>
+
+<publishReady status="true"></publishReady>
+<DocumentProperties>
+  <DocumentProperty name="OPV_email_to" reference="MonthlyReport:email" type="string"/>
+</DocumentProperties>

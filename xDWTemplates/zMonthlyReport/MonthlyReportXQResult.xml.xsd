@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+  <xs:element name="MonthlyReports">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="MonthlyReport"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="MonthlyReport">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="badge_number"/>
+        <xs:element ref="email"/>
+        <xs:element ref="first_name"/>
+        <xs:element ref="last_name"/>
+        <xs:element ref="gender"/>
+        <xs:element ref="update_date"/>
+        <xs:element ref="first_date"/>
+        <xs:element ref="award_threshold"/>
+        <xs:element ref="days_above_threshold"/>
+        <xs:element ref="award"/>
+        <xs:element ref="index_history_nvp"/>
+        <xs:element ref="index_history_csv"/>
+        <xs:element ref="index_history_xml"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="badge_number" type="xs:integer"/>
+  <xs:element name="email" type="xs:string"/>
+  <xs:element name="first_name" type="xs:NCName"/>
+  <xs:element name="last_name" type="xs:NCName"/>
+  <xs:element name="gender" type="xs:NCName"/>
+  <xs:element name="update_date" type="xs:NMTOKEN"/>
+  <xs:element name="first_date" type="xs:NMTOKEN"/>
+  <xs:element name="award_threshold" type="xs:integer"/>
+  <xs:element name="days_above_threshold" type="xs:integer"/>
+  <xs:element name="award" type="xs:boolean"/>
+  <xs:element name="index_history_nvp" type="xs:string"/>
+  <xs:element name="index_history_csv" type="xs:string"/>
+  <xs:element name="index_history_xml" type="xs:string"/>
+</xs:schema>
