@@ -5,11 +5,28 @@ _debugFile = "C:/Users/admin/Desktop/Folders/Files/debug.txt";
 
 if (_initLog) stringToFile("", _debugFile);
 
+function getWeeklyReportGaugeChartFromValues(label, percentage, color) {
+	logMessage("INFO - getWeeklyReportGaugeChartFromValues: " + label + ", " + percentage + ", " + color);
+	try {
+		var ChartHelper = Packages.com.diy.charthelper.GaugeChartHelper();
+		var ImageLocation  = ChartHelper.generateWeeklyReviewGaugeChart(
+			label,
+			""+percentage,
+			color
+		);
+		ChartHelper = null;
+		logMessage("INFO - getWeeklyReportGaugeChartFromValues: " + ImageLocation);
+		return ImageLocation;
+	} catch (err) {
+		logMessage("ERROR - getWeeklyReportGaugeChartFromValues: " + err.message);
+	}
+}
+
 function getMonthlyReportLineChartFromXML(xml) {
 	logMessage("INFO - getMonthlyReportLineChartFromXML: " + xml);
 	try {
 		var ChartHelper = Packages.com.diy.charthelper.XML2ChartHelper();
-		var ImageLocation  = ChartHelper.generatTSChartFromXML(xml);
+		var ImageLocation  = ChartHelper.generateTSChartFromXML(xml);
 		ChartHelper = null;
 		logMessage("INFO - getMonthlyReportLineChartFromXML: " + ImageLocation);
 		return ImageLocation;
@@ -31,6 +48,19 @@ function createBarChartValuesAndGetName(v11, v12, v21, v22) {
 		return ImageLocation;
 	} catch (err) {
 		logMessage("ERROR - cbc: " + err.message);
+	}
+}
+
+function getWeeklyReportLineChartFromXML(xml) {
+	logMessage("INFO - getWeeklyReportLineChartFromXML: " + xml);
+	try {
+		var ChartHelper = Packages.com.diy.charthelper.XML2ChartHelper();
+		var ImageLocation  = ChartHelper.generateTSChartFromXML(xml);
+		ChartHelper = null;
+		logMessage("INFO - getWeeklyReportLineChartFromXML: " + ImageLocation);
+		return ImageLocation;
+	} catch (err) {
+		logMessage("ERROR - getWeeklyReportLineChartFromXML: " + err.message);
 	}
 }
 
