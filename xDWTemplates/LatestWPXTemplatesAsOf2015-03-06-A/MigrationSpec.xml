@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MigrationSpec>
+  <PdpFile name="C:\Users\admin\Desktop\MigrationPDP.pdpx" />
+  <Object type="attrset" name="Empty" />
+  <Object type="datasourcegroup" name="WellnessProgram_xPresso" />
+  <Object type="category" name="WellnessProgram_xPresso" />
+  <xPressoPackage name="FreeText.xdrwv" whichObj="all" version="1.1" incfont="no" />
+  <xPressoPackage name="MonthlyReport.xdrwv" whichObj="all" version="1.12" incfont="no" />
+  <xPressoPackage name="UserEnrollmentNotification.xdrwv" whichObj="all" version="1.2" incfont="no" />
+  <xPressoPackage name="WeeklyReport.xdrwv" whichObj="all" version="1.13" incfont="no" />
+</MigrationSpec>
+
