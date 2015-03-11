@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <chart_data>
-	<!--horizontal_marker>
+	<horizontal_marker>
 		<value>500</value>
 		<line_style></line_style>
 		<line_color>FFFF00</line_color>
 		<label>AT</label>
-	</horizontal_marker-->
+	</horizontal_marker>
 	<categories>
 		<title>Date</title>
 		<values>
