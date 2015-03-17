@@ -1,34 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
-  <xs:element name="WeeklyReports">
+  <xs:element name="weekly_data">
     <xs:complexType>
       <xs:sequence>
-        <xs:element maxOccurs="unbounded" ref="WeeklyReport"/>
+        <xs:element maxOccurs="unbounded" ref="weekly_member_data"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="WeeklyReport">
+  <xs:element name="weekly_member_data">
     <xs:complexType>
       <xs:sequence>
-        <xs:element ref="badge_number"/>
-        <xs:element ref="email"/>
-        <xs:element ref="first_name"/>
-        <xs:element ref="last_name"/>
-        <xs:element ref="gender"/>
+        <xs:element ref="id"/>
+        <xs:element ref="member_id"/>
+        <xs:element ref="weekly_index_value"/>
+        <xs:element ref="weekly_index_level"/>
+        <xs:element ref="weekly_index_level_label"/>
+        <xs:element ref="weekly_index_color"/>
         <xs:element ref="week_start_date"/>
         <xs:element ref="recomendations"/>
-        <xs:element ref="index_history_nvp"/>
-        <xs:element ref="index_history_csv"/>
-        <xs:element ref="index_history_xml"/>
       </xs:sequence>
     </xs:complexType>
   </xs:element>
-  <xs:element name="badge_number" type="xs:integer"/>
-  <xs:element name="email" type="xs:string"/>
-  <xs:element name="first_name" type="xs:NCName"/>
-  <xs:element name="last_name" type="xs:NCName"/>
-  <xs:element name="gender" type="xs:NCName"/>
-  <xs:element name="week_start_date" type="xs:NMTOKEN"/>
+  <xs:element name="id" type="xs:NCName"/>
+  <xs:element name="member_id" type="xs:integer"/>
+  <xs:element name="weekly_index_value" type="xs:integer"/>
+  <xs:element name="weekly_index_level" type="xs:integer"/>
+  <xs:element name="weekly_index_level_label" type="xs:NCName"/>
+  <xs:element name="weekly_index_color" type="xs:NMTOKEN"/>
+  <xs:element name="week_start_date" type="xs:date"/>
   <xs:element name="recomendations">
     <xs:complexType>
       <xs:sequence>
@@ -48,9 +47,6 @@
   </xs:element>
   <xs:element name="value" type="xs:integer"/>
   <xs:element name="label" type="xs:NCName"/>
-  <xs:element name="color" type="xs:string"/>
+  <xs:element name="color" type="xs:NMTOKEN"/>
   <xs:element name="text" type="xs:string"/>
-  <xs:element name="index_history_nvp" type="xs:string"/>
-  <xs:element name="index_history_csv" type="xs:string"/>
-  <xs:element name="index_history_xml" type="xs:string"/>
 </xs:schema>
