@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<MigrationSpec>
-  <ServerVersion version="4.5 SP1" versionNumber="4.5.1.13" />
-  <PdpFile name="C:\GIT\WellnessProgramXPression\xDWTemplates\OPMigrationPDP.pdpx" />
-  <OutputProfile name="HTML to ArgoSoft" />
-</MigrationSpec>
-
